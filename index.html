@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beer Consumption Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Beer Consumption Prediction</h1>
+    <form method="post" action="/predict">
+        <label for="TemperatureAvg">Average Temperature (C):</label>
+        <input type="text" name="TemperatureAvg" required><br>
+
+        <label for="TemperatureMin">Min Temperature (C):</label>
+        <input type="text" name="TemperatureMin" required><br>
+
+        <label for="TemperatureMax">Max Temperature (C):</label>
+        <input type="text" name="TemperatureMax" required><br>
+
+        <label for="Precipitation">Precipitation (mm):</label>
+        <input type="text" name="Precipitation" required><br>
+
+        <label for="Weekend">Weekend (0 or 1):</label>
+        <input type="text" name="Weekend" required><br>
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
